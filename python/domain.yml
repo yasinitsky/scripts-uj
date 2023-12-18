@@ -1,0 +1,50 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - show_menu
+  - is_open
+  - order
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+  utter_imabot:
+  - text: "I am a bot, powered by Rasa."
+  utter_goodbye:
+  - text: "Bye!"
+  utter_deny_order:
+  - text: "Your order has been canceled. You can place a new one."
+
+actions:
+  - action_show_menu
+  - action_is_open
+  - action_process_order
+  - action_confirm_order
+
+entities:
+  - day
+  - time
+  - order_item
+  - order_special
+
+slots:
+  order_item:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: order_item
+  order_special:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: order_special
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

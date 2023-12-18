@@ -1,0 +1,63 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - not really
+
+- intent: show_menu
+  examples: |
+    - show me a menu
+    - what can i eat
+    - show me a menu please
+    - menu please
+
+- intent: is_open
+  examples: |
+    - are you open on [Monday](day) at [9:00](time)
+    - are you open on [Monday](day) at [9](time) o'clock
+    - are you open on [Monday](day) at [9](time)
+    - are you open on [Monday](day) at [9.00](time)
+
+- intent: order
+  examples: |
+    - I would like to order a [pizza](order_item) [without onions](order_special)
+    - Can I get a [burger](order_item), but with [extra cheese](order_special)?
+    - I want to order a [lasagne](order_item), but [without garlic](order_special).
+    - I want to order two [lasagnes](order_item).
+    - Could I have a [spaghetti carbonara](order_item)?
+    - Please add a [hot-dog](order_item) to my order.
+    - Let me get a [tiramisu](order_item).
+    - I'll have a [pizza](order_item) with [extra cheese](order_special).
+    - Order a [burger](order_item) [without pickles](order_special), please.
+    - A [lasagne](order_item) and a [coke](order_item) for me.
+    - I'm craving a [hot-dog](order_item) with [extra mustard](order_special).
+    - Could you add a [salad](order_item) to my order?
+    - Place an order for a [hot-dog](order_item) with [no mustard](order_special).

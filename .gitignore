@@ -1,3 +1,5 @@
 python/models
 __pycache__
 python/.rasa
+node_modules
+typescript/api/dist

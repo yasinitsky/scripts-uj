@@ -1,0 +1,10 @@
+{
+    "extends": "@tsconfig/node20/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "lib": [ "es2023" ],
+        "resolveJsonModule": true,
+        "noErrorTruncation": true
+    },
+    "include": ["src/**/*"]
+}
